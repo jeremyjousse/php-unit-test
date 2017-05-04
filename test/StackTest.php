@@ -15,5 +15,10 @@ class StackTest extends TestCase
         $this->assertEquals('foo', array_pop($stack));
         $this->assertEquals(0, count($stack));
     }
+
+    public function testPdoConnexion()
+    {
+        $bdd = new PDO('mysql:host=mysqlserver;dbname=test;charset=utf8', 'test', 'test');
+    }
 }
 ?>
